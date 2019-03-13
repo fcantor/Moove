@@ -27,4 +27,5 @@ gas_cost = (11.05 * distance_miles) // 100
 print("Road Trip!")
 print(f"Distance: {distance_miles}")
 print(f"Time: {time_converted}")
-print(f"Total Costs: ${wt_cost + gas_cost} ($.19/mile)")
+print(f"Total Costs driving: ${wt_cost + gas_cost} ($.19/mile)")
+print(f"Total Costs renting: ${gas_cost} ($.11/mile)")
