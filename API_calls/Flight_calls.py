@@ -5,6 +5,7 @@ Script that opens a flight search API session
 import requests
 from sys import argv
 import pprint
+from config import flight_key
 
 
 if __name__ == "__main__":
@@ -21,7 +22,7 @@ if __name__ == "__main__":
   api_string = "".join(list)  
   response = requests.get(api_string,
   headers={
-    "X-RapidAPI-Key": "NhPckVP3HYmshVQm7eKHEZxsKkVcp1RXXo3jsnN0exwdh5asqk"
+    "X-RapidAPI-Key": flight_key
   }
 )
   try:
