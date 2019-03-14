@@ -6,6 +6,7 @@ from config import flight_key
 import json
 import requests
 from sys import argv
+import pprint
 
 
 if __name__ == "__main__":
@@ -28,6 +29,7 @@ if __name__ == "__main__":
 data = json.loads(response.text)
 key_dict = {}
 for k, v in data.items():
+  pp = pprint.PrettyPrinter(indent=4)
   key_dict[k] = v
 for k, v in key_dict.items():
   if k == 'airportSummary':
@@ -37,17 +39,14 @@ for k, v in key_dict.items():
   if k == 'departDate':
     depart_date = v
   if k == 'tripset':
+    tripset = {}
     tripset = v
-    for info in tripset:
-      for a, b in info.items():
-        if a == 'cheapestProviderName':
-          provider = b
-        if a == 'duration':
-          duration = b
-        if a == 'cabinClass':
-          cabin_class = b
+    flight = tripset[0]
+    airline = flight['cheapestProviderName']
+    duration = flight['duration']
+    cabin_class = flight['cabinClass']
 
 print("The cheapest price from {} on {} is ${}".format(airport_summary, depart_date, cheapest_price))
-print("Airline: {}".format(provider))
-print("Duration: {}".format(duration))
+print("Airline: {}".format(airline))
+print("Duration: {} minutes".format(duration))
 print("Cabin Class: {}".format(cabin_class))
