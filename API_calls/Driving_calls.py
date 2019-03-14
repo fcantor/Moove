@@ -4,29 +4,40 @@ from datetime import datetime, timedelta
 import googlemaps
 from sys import argv
 
-gmaps = googlemaps.Client(key=api_key)
+if __name__ == "__main__":
 
-origin = argv[1]
-destination = argv[2]
-date = datetime.now()
+    # initializing with API key
+    gmaps = googlemaps.Client(key=api_key)
 
-if len(argv) > 3:
-    date = datetime.strptime(argv[3], "%m/%d/%Y")
+    # Locations can be city names, addresses, and can even have typos
+    origin = argv[1]
+    destination = argv[2]
 
+    # Default date set to today
+    date = datetime.now()
 
-direc = gmaps.directions(origin, destination, mode="driving",
-                         departure_time=date)
+    # If a date is given, the date is set. Use mm/dd/yyy format
+    if len(argv) > 3:
+        date = datetime.strptime(argv[3], "%m/%d/%Y")
 
-distance_meters = direc[0]['legs'][0]['distance']['value']
-distance_miles = distance_meters // 1609.344
+    # Inital API call is made with given variables and returns a wealth of information
+    direc = gmaps.directions(origin, destination, mode="driving",
+                             departure_time=date)
 
-time_converted = timedelta(seconds=direc[0]['legs'][0]['duration']['value'])
+    # Distance between locations is pulled and converted to miles from meters
+    distance_meters = direc[0]['legs'][0]['distance']['value']
+    distance_miles = distance_meters // 1609.344
 
-wt_cost = (8.21 * distance_miles) // 100
-gas_cost = (11.05 * distance_miles) // 100
+    # Travel time is pulled and converted to hours, minutes, and seconds
+    time_converted = timedelta(seconds=direc[0]['legs'][0]['duration']['value'])
 
-print("Road Trip!")
-print(f"Distance: {distance_miles}")
-print(f"Time: {time_converted}")
-print(f"Total Costs driving: ${wt_cost + gas_cost} ($.19/mile)")
-print(f"Total Costs renting: ${gas_cost} ($.11/mile)")
+    # Wear & tear costs and gas costs are average prices in cents per mile as
+    # given by AAA for the year of 2018
+    wt_cost = (8.21 * distance_miles) // 100
+    gas_cost = (11.05 * distance_miles) // 100
+
+    print("Road Trip!")
+    print(f"Distance: {distance_miles}")
+    print(f"Time: {time_converted}")
+    print(f"Total Costs driving: ${wt_cost + gas_cost} ($.19/mile)")
+    print(f"Total Costs renting: ${gas_cost} ($.11/mile)")
