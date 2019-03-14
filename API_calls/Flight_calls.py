@@ -6,7 +6,7 @@ from config import flight_key
 import json
 import requests
 from sys import argv
-import pprint
+
 
 
 if __name__ == "__main__":
