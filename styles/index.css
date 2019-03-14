@@ -1,0 +1,163 @@
+/*body*/
+body {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    height: 1000px;
+    margin: 0;
+}
+
+/* header */
+header {
+    padding-top: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    color: #D1B33E;
+    text-align: center;
+    border-bottom: 2px solid black;
+    height: 65px;
+}
+
+h1 {
+    margin: 0;
+}
+/* end header */
+
+h2 {
+    margin-top: -25px;
+    margin-bottom: 0;
+    align-self: center;
+    font-size: 25px;
+    text-align: center;
+    width: 300px;
+}
+
+/* main content between header and footer */
+.main {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    width: auto;
+}
+
+/* search form */
+.booktrip {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-self: center;
+    margin-top: 50px;
+    margin-bottom: 75px;
+    margin-right: 20px;
+    padding: 20px;
+    border: .5px solid #9F9E94;
+    border-radius: 15px;
+    width: 300px;
+    height: 500px;
+    -webkit-box-shadow: 0 0 5px 2px #9F9E94;
+    -moz-box-shadow: 0 0 5px 2px #9F9E94;
+    box-shadow: 0 0 25px 5px #9F9E94;
+}
+
+input {
+    margin-top: 40px;
+    width: 100px;
+}
+
+.cabindrop {
+    margin-top: 40px;
+}
+
+select {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 85px;
+}
+
+button {
+    align-self: center;
+    height: 30px;
+    width: 65px;
+}
+/* end search form */
+
+/* aside section */
+.aside {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 500px;
+    width: 330px;
+    margin-top: 50px;
+}
+
+.about {
+    margin-top: 55px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    height: 300px;
+}
+
+.places {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 75px;
+    width: 330px;
+    height: 200px;
+}
+
+.viewplaces {
+    align-self: center;
+    left: 0;
+    right: 0;
+}
+
+a {
+    margin: 5px;
+}
+
+.vegas {
+    background-image: url(images/vegas.jpg);
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+}
+
+.portland {
+    background-image: url(images/portland.jpg);
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+}
+
+.sandiego {
+    background-image: url(images/sandiego.jpg);
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+}
+
+/* end aside */
+
+
+/* end main */
+
+
+/* footer */
+footer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    text-align: center;
+    color: #D1B33E;
+    background-color: white;
+    border-top: 2px solid black;
+    height: 65px;
+}
+/* end footer*/
+/* end body */
