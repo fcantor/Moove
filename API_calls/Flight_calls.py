@@ -8,6 +8,20 @@ import requests
 from sys import argv
 
 
+def notAirline(tripset):
+    ''' This function finds the value in tripset that isn't a listed airline '''
+    # list of airlines available in the API
+    airlines = ['Boutique Air', 'Major Airline', 'American Airlines', 'Alaska Airlines', 'JetBlue', 'Delta', 'Frontier', 'Hawaiian Airlines', 'Multiple Airlines', 'Spirit Airlines', 'Linear Air Taxi', 'United Airlines', 'Southwest', 'JetSuiteX']
+    x = 0
+
+    # loop through all the data in tripset, which is a set of details per flight
+    for detail in tripset:
+        # if the cheapest provider name is not in the airlines list above
+        if tripset[x]['cheapestProviderName'] not in airlines:
+            # move onto the next set until you get a set that includes an airline listed in the airlines list above
+            x = x + 1
+    return(tripset[x])
+
 
 if __name__ == "__main__":
     # these are the necessary variables needed to make the api call
@@ -49,14 +63,15 @@ if __name__ == "__main__":
         if k == 'departDate':
             depart_date = v
         if k == 'tripset':
-            tripset = {}
+            tripset = [] # turn object into dictionary
             tripset = v
-            flight = tripset[0]
+
+    flight = notAirline(tripset)
     # these values shouldn't be in the for-loop as there are multiple values with the same name
     # and will override the first values, which we need
     airline = flight['cheapestProviderName']
     duration = flight['duration']
-    cabin_class = flight['cabinClass']
+    cabin_class = flight['fareFamily']['displayName']
 
     # printing out the variables to check whether we got the right values
     print("The cheapest price from {} on {} is ${}".format(airport_summary, depart_date, cheapest_price))
