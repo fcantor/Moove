@@ -16,11 +16,14 @@ if __name__ == "__main__":
     # Default date set to today
     date = datetime.now()
 
-    # If a date is given, the date is set. Use mm/dd/yyy format
+    # If a date is given, the date is set. Use mm/dd/yyy format.
+    # When front and back are connected, change code to
+    # if (date is not None) or something similar, don't count args
     if len(argv) > 3:
         date = datetime.strptime(argv[3], "%m/%d/%Y")
 
-    # Inital API call is made with given variables and returns a wealth of information
+    # Inital API call is made with given variables and returns a
+    # wealth of information
     direc = gmaps.directions(origin, destination, mode="driving",
                              departure_time=date)
 
