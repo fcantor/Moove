@@ -47,8 +47,7 @@ if __name__ == "__main__":
     origin_code = re.search(r'\((.*?)\)', origin_res).group(1)
     destination_res = gmaps.geocode(address="airport " + argv[2])[0]["formatted_address"]
     destination_code = re.search(r'\((.*?)\)', destination_res).group(1)
-    print(origin_code)
-    print(destination_code)
+
     # If a date is given, the date is set. Use mm/dd/yyy format.
     # When front and back are connected, change code to
     # if (date is not None) or something similar, don't count args
