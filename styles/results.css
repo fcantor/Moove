@@ -1,0 +1,73 @@
+/*body*/
+body {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    height: 1000px;
+    margin: 0;
+}
+
+/* header */
+header {
+    padding-top: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    color: #D1B33E;
+    text-align: center;
+    border-bottom: 2px solid black;
+    height: 65px;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* main content */
+.main {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: auto;
+    height: 500px;
+}
+
+/* transportation divs */
+.driving, .flying, .transit, .rentalCar {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    border: .5px solid #9F9E94;
+    border-radius: 15px;
+    -webkit-box-shadow: 0 0 5px 2px #9F9E94;
+    -moz-box-shadow: 0 0 5px 2px #9F9E94;
+    box-shadow: 0 0 25px 5px #9F9E94;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 300px;
+    height: 500px;
+}
+/*end transportation divs */
+/* endmain */
+
+
+/* footer */
+footer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    text-align: center;
+    color: #D1B33E;
+    background-color: white;
+    border-top: 2px solid black;
+    height: 65px;
+}
+/* end footer*/
+/* end body */

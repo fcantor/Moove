@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Moove</title>
+
+        <link rel="stylesheet" href="styles/index.css">
+    </head>
+
+    <body>
+        <!--header-->
+        <header>
+            <h1>MOOVE</h1>
+        </header>
+        <!--endheader-->
+
+        <!--main content-->
+        <h2>Get the best travel options. Start searching now!</h2>
+        <div class="main">
+            <!--booking a trip form-->
+            <div class="booktrip">
+                <form class="origin" action="index.html" method="post">
+                    <label for="originplace">Enter Current Location:</label>
+                    <input type="text" name="originplace"
+                    placeholder="Current location">
+                    <label for="destination">Enter Desired Location:</label>
+                    <input type="text" name="destination"
+                    placeholder="Desired Location">
+                    <label for="startdate">Select Departure Date:</label>
+                    <input type="date" id="startdate" name="startdate">
+                </form>
+                <!--this is the dropbox to select a cabin-->
+                <div>
+                    <label for="cabindrop" class="cabindrop">Select Desired Cabin:</label>
+                    <select class="cabin" name="cabindrop">
+                        <option value="economy">Economy</option>
+                        <option value="business">Business</option>
+                        <option value="firstclass">First Class</option>
+                    </select>
+                </div>
+                <button type="submit" name="Search">Search</button>
+            </div>
+            <!--about the company section-->
+            <div class="aside">
+                <div class="about">
+                    <h2 class="aboutheading">Welcome to Moove</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the industry's
+                        standard dummy text ever since the 1500s, when an unknown
+                        printer took a galley of type and scrambled it to make a type
+                        specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining
+                        essentially unchanged. It was popularised in the 1960s with the
+                        release of Letraset sheets containing Lorem Ipsum passages,
+                        and more recently with desktop publishing software like Aldus
+                        PageMaker including versions of Lorem Ipsum.<p>
+                </div>
+                <div class="places">
+                    <h2 class="viewplaces">Check out these cities!</h2>
+                    <a href="https://www.lasvegasnevada.gov/" class="vegas">.</a>
+                    <a href="https://www.portlandoregon.gov/" class="portland">.</a>
+                    <a href="https://www.sandiego.gov/" class="sandiego">.</a>
+                </div>
+            </div>
+        </div>
+        <!--endmain-->
+
+        <!--footer-->
+        <footer>
+            <p>Always providing the best transportation options!</p>
+        </footer>
+    </body>
+
+</html>
