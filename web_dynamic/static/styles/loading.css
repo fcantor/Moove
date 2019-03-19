@@ -1,0 +1,71 @@
+body {
+    background-color: white;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+header {
+    font-size: 15px;
+    text-align: center;
+    color: #D1B33E;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+}
+
+.cow {
+    align-self: center;
+    width: 335px;
+    height: 304px;
+    animation: beat 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes beat {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(.6);
+    }
+}
+
+.head {
+    align-self: center;
+    background-image: url(images/cow-logo-nowords.png);
+    width: 329px;
+    height: 299px;
+    animation: shake 1.3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% {transform: translate(1px, 1px) rotate(3deg);}
+  10% { transform: translate(-1px, -2px) rotate(-5deg); }
+  20% { transform: translate(-3px, 0px) rotate(5deg); }
+  30% { transform: translate(3px, 2px) rotate(-5deg); }
+  40% { transform: translate(1px, -1px) rotate(5deg); }
+  50% {transform: translate(-1px, 2px) rotate(-5deg);}
+  60% { transform: translate(-3px, 1px) rotate(5deg); }
+  70% { transform: translate(3px, 1px) rotate(-5deg); }
+  80% { transform: translate(-1px, -1px) rotate(5deg); }
+  90% { transform: translate(1px, 2px) rotate(-5deg); }
+  100% { transform: translate(1px, -2px) rotate(5deg); }
+}
+
+/* footer */
+footer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    text-align: center;
+    color: #D1B33E;
+    background-color: white;
+    border-top: 2px solid black;
+    height: 65px;
+    font-family: 'Ubuntu', sans-serif;
+}
+/* end footer*/

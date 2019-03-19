@@ -1,0 +1,162 @@
+html {
+    top: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0;
+    width: auto;
+    height: 100%;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/*left side*/
+.main1 {
+    background-image: url(images/unsplash-mountains.jpg);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-content: center;
+    width: 50%;
+    height: auto;
+}
+
+.booktrip {
+    background-color: white;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    margin: 50px 20px 50px 20px;
+    padding: 20px;
+    border: .5px solid #9F9E94;
+    border-radius: 15px;
+    -webkit-box-shadow: 0 0 5px 2px #9F9E94;
+    -moz-box-shadow: 0 0 5px 2px #9F9E94;
+    box-shadow: 0 0 25px 5px #9F9E94;
+    width: 50%;
+    height: 500px;
+}
+
+input {
+
+}
+
+input:focus {
+
+}
+
+.cabindrop {
+
+}
+
+
+.cabindrop p {
+
+}
+
+.cabindrop p .fas {
+
+}
+
+.cabindrop .cabins {
+
+}
+
+.cabindrop .cabins ul {
+
+}
+
+.cabindrop .cabins ul li {
+
+}
+
+.cabindrop .cabins ul li:hover {
+
+}
+
+button {
+
+}
+
+/*right side*/
+.main2 {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+    width: 50%;
+    height: auto;
+}
+
+.main2 .logo {
+    position: absolute;
+    top: 0;
+    background-image: url(images/cow-logo.png);
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    align-self: center;
+    color: #D1B33E;
+    width: 200px;
+    height: 175px;
+}
+
+.aside {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    margin: 90px 20px 50px 20px;
+    width: 50%;
+    height: 500px;
+    text-align: center;
+}
+
+.aside .about {
+    margin-top: 35px;
+    margin-bottom: 20px;
+    height: 300px;
+}
+
+.aside .about .aboutheading {
+    margin-top: 5px;
+    margin-bottom: 3px;
+    text-align: center;
+}
+
+.aside .about p {
+    margin: 0;
+}
+
+.aside .places {
+
+}
+
+.aside .places .viewplaces {
+
+}
+
+.aside .places a {
+
+}
+
+.aside .places .vegas {
+
+}
+
+.aside .places .portland {
+
+}
+
+.aside .places .sandiego {
+
+}
+
+footer {
+
+}

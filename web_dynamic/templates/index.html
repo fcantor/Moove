@@ -4,43 +4,39 @@
         <meta charset="utf-8">
         <title>Moove</title>
 
-        <link rel="stylesheet" href="styles/index.css">
+        <link rel="stylesheet" href="../static/styles/index.css">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     </head>
-
     <body>
-        <!--header-->
-        <header>
-            <h1>MOOVE</h1>
-        </header>
-        <!--endheader-->
-
-        <!--main content-->
-        <h2>Get the best travel options. Start searching now!</h2>
-        <div class="main">
-            <!--booking a trip form-->
+        <div class="main1">
             <div class="booktrip">
                 <form class="origin" action="index.html" method="post">
-                    <label for="originplace">Enter Current Location:</label>
+                    <!--label for="originplace">Enter Current Location:</label-->
                     <input type="text" name="originplace"
-                    placeholder="Current location">
-                    <label for="destination">Enter Desired Location:</label>
+                    placeholder="Current location" required>
+                    <!--label for="destination">Enter Desired Location:</label-->
                     <input type="text" name="destination"
-                    placeholder="Desired Location">
-                    <label for="startdate">Select Departure Date:</label>
-                    <input type="date" id="startdate" name="startdate">
+                    placeholder="Desired Location" required>
+                    <!--label for="startdate">Select Departure Date:</label-->
+                    <input type="date" id="startdate" name="startdate" required>
                 </form>
                 <!--this is the dropbox to select a cabin-->
-                <div>
-                    <label for="cabindrop" class="cabindrop">Select Desired Cabin:</label>
-                    <select class="cabin" name="cabindrop">
-                        <option value="economy">Economy</option>
-                        <option value="business">Business</option>
-                        <option value="firstclass">First Class</option>
-                    </select>
+                <div class="cabindrop">
+                    <p>Select Cabin<i class="fas fa-angle-down"></i></p>
+                    <div class="cabins">
+                        <ul>
+                            <li class="econ">Economy</li>
+                            <li class="bus">Business</li>
+                            <li class="first">First Class</li>
+                        </ul>
+                    </div>
                 </div>
                 <button type="submit" name="Search">Search</button>
             </div>
-            <!--about the company section-->
+        </div>
+        <div class="main2">
+            <div class="logo"></div>
             <div class="aside">
                 <div class="about">
                     <h2 class="aboutheading">Welcome to Moove</h2>
@@ -62,13 +58,9 @@
                     <a href="https://www.sandiego.gov/" class="sandiego">.</a>
                 </div>
             </div>
+            <footer>
+                <p>Always providing the best transportation options!</p>
+            </footer>
         </div>
-        <!--endmain-->
-
-        <!--footer-->
-        <footer>
-            <p>Always providing the best transportation options!</p>
-        </footer>
     </body>
-
 </html>
