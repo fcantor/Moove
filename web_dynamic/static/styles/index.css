@@ -38,49 +38,90 @@ body {
     -webkit-box-shadow: 0 0 5px 2px #9F9E94;
     -moz-box-shadow: 0 0 5px 2px #9F9E94;
     box-shadow: 0 0 25px 5px #9F9E94;
-    width: 50%;
+    width: 45%;
     height: 500px;
 }
 
 input {
-
+    margin-top: 20px;
+    margin-left: 30px;
+    align-self: center;
+    width: 250px;
+    height: 30px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+    border: none;
+    border-bottom: 2px solid #9F9E94;
 }
 
 input:focus {
-
+    outline: none;
 }
 
 .cabindrop {
-
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-left: -5px;
+    width: 253px;
+    height: 100px;
+    font-size: 15px;
 }
 
 
 .cabindrop p {
-
+    border-bottom: 2px solid #9F9E94;
+    margin-left: 35px;
+    padding-top: 5px;
+    padding-left: 3px;
+    width: 250px;
 }
 
 .cabindrop p .fas {
-
+    margin-left: 140px;
+    height: 25px;
+    width: 25px;
+    color: black;
 }
 
 .cabindrop .cabins {
+    visibility: hidden;
+}
 
+.cabindrop:hover .cabins {
+    visibility: visible;
 }
 
 .cabindrop .cabins ul {
-
+    margin-top: -15px;
+    margin-left: 35px;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+    border: 1px solid #9F9E94;
+    border-top: none;
+    height: 70px;
+    width: 240px;
+    list-style-type: none;
 }
 
 .cabindrop .cabins ul li {
-
+    margin: 5px;
 }
 
 .cabindrop .cabins ul li:hover {
-
+    right: 0;
+    left: 0;
+    background-color: rgba(159, 158, 148, .3);
 }
 
 button {
-
+    align-self: center;
+    margin-top: 15px;
+    height: 30px;
+    width: 65px;
 }
 
 /*right side*/
@@ -134,29 +175,56 @@ button {
 }
 
 .aside .places {
-
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-self: center;
+    margin-top: 20px;
+    margin-bottom: 75px;
+    width: 330px;
+    height: 200px;
 }
 
 .aside .places .viewplaces {
-
+    align-self: center;
+    left: 0;
+    right: 0;
 }
 
-.aside .places a {
-
+a {
+    margin: 5px;
+    padding: 5px;
 }
 
 .aside .places .vegas {
+    background-image: url(images/vegas.jpg);
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+}
 
+.aside .places .vegas p {
+    margin-top: 85px;
 }
 
 .aside .places .portland {
+    background-image: url(images/portland.jpg);
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+}
 
+.aside .places .portland p {
+    margin-top: 85px;
 }
 
 .aside .places .sandiego {
-
+    background-image: url(images/sandiego.jpg);
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
 }
 
-footer {
-
+.aside .places .sandiego p {
+    margin-top: 85px;
 }
