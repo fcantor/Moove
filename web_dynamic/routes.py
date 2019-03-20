@@ -13,7 +13,7 @@ app.url_map.strict_slashes = False
 
 # flask server environmental setup
 host = getenv('API_HOST', '0.0.0.0')
-port = getenv('API_PORT', 5000)
+port = getenv('API_PORT', 5001)
 
 @app.route('/')
 def index():
@@ -29,11 +29,20 @@ def loading():
     """
     return render_template("loading.html")
 
-@app.route('/results')
-def results():
+#@route('name/<origin>/<destination>/<date>)
+
+@app.route('/results', methods=['POST'])
+def results(oring=NULL, ):
     """
     Function that returns the car-rental page
     """
+    origin = request.json['origin']
+    destination = request.json['destination']
+    date = request.json['date']
+    r = request.get()
+    print("Origin: {}".format(origin))
+    print("Destination: {}".format(destination))
+    print("Date: {}".format(date))
     return render_template("results.html")
 
 @app.errorhandler(404)

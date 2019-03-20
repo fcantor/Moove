@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
+        <SCRIPT src="https://code.jquery.com/jquery-3.2.1.min.js"></SCRIPT>
+        <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+        <SCRIPT src="static/scripts/app.js"></SCRIPT>
         <meta charset="utf-8">
         <title>Moove</title>
 
@@ -13,10 +16,10 @@
             <div class="booktrip">
                 <form class="origin" action="index.html" method="post">
                     <!--label for="originplace">Enter Current Location:</label-->
-                    <input type="text" name="originplace"
+                    <input type="text" name="originplace" id="originplace"
                     placeholder="Current location" required>
                     <!--label for="destination">Enter Desired Location:</label-->
-                    <input type="text" name="destination"
+                    <input type="text" name="destination" id="destination"
                     placeholder="Desired Location" required>
                     <!--label for="startdate">Select Departure Date:</label-->
                     <input type="date" id="startdate" name="startdate" required>
@@ -32,7 +35,7 @@
                         </ul>
                     </div>
                 </div>
-                <button type="submit" name="Search">Search</button>
+                <button type="submit" name="Search" id="searchButton">Search</button>
             </div>
         </div>
         <div class="main2">

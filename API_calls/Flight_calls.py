@@ -31,6 +31,10 @@ def notAirline(tripset):
 
 
 if __name__ == "__main__":
+
+    @app.route('/name/<origin>/<destination>/<date>'), methods=['POST'])
+    def results(oring=NULL, ):
+
     # these are the necessary variables needed to make the api call
     cabin = argv[3]
     depart_date = datetime.now().strftime("%Y-%m-%d")
