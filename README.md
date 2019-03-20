@@ -14,6 +14,7 @@ The Project is a travel web application. It pulls data from the Google and Kayak
 	* [Contributing](#contributing)
 	* [Authors](#authors)
 	* [License](#license)
+	* [Mentors](#mentors)
 
 ## Installation
 The environment the app was built in is outlined in the section below. Ensure all dependencies are installed in order to run the app smoothly. Setup scripts are currently in development and will be released soon, but for now please just update or install what you need to on your own!
@@ -44,6 +45,9 @@ Essence Boayue [Github](https://github.com/eboayue)|[Twitter](https://twitter.co
 Francesca Cantor [Github](https://github.com/fcantor)|[Twitter](https://twitter.com/servomecatnism)|[LinkedIn](https://www.linkedin.com/in/fcantor/)
 
 Ca'Nese Curvin [Github](https://github.com/ceecurvin)|[Twitter](https://twitter.com/cscurvin1)|[LinkedIn](https://www.linkedin.com/in/ccurvin/)
+
+## Mentors
+Elaine Yeung [Github](https://github.com/egsy)|[Twitter](https://twitter.com/egsy)|[LinkedIn](https://www.linkedin.com/in/yeungegs/)
 
 ## License
 GNU GENERAL PUBLIC LICENSE
