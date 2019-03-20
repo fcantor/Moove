@@ -10,6 +10,15 @@ import re
 import requests
 from sys import argv
 
+@app.route('/results/<origin>/<destination>/<date>', methods=['POST', 'GET'])
+    def results():
+        """
+        API endpoint that gets information from routes endpoint
+        """
+        r = requests.get(url='0.0.0.0:5001/results/')
+        data = r.json()
+        print(data)
+
 
 def notAirline(tripset):
     ''' This function finds the value in tripset that isn't a listed airline '''
@@ -31,9 +40,6 @@ def notAirline(tripset):
 
 
 if __name__ == "__main__":
-
-    @app.route('/name/<origin>/<destination>/<date>'), methods=['POST'])
-    def results(oring=NULL, ):
 
     # these are the necessary variables needed to make the api call
     cabin = argv[3]
@@ -72,8 +78,7 @@ if __name__ == "__main__":
                             headers={
                                 "X-RapidAPI-Key": "NhPckVP3HYmshVQm7eKHEZxsKkVcp1RXXo3jsnN0exwdh5asqk",
                                 "Content-Type": "Application/Json"
-                            }
-                            )
+                            })
 
     # jsonifying the values we received from the api call
     data = json.loads(response.text)

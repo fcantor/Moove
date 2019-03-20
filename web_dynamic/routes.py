@@ -29,17 +29,15 @@ def loading():
     """
     return render_template("loading.html")
 
-#@route('name/<origin>/<destination>/<date>)
-
-@app.route('/results', methods=['POST'])
-def results(oring=NULL, ):
+@app.route('/results/<origin>/<destination>/<date>', methods=['POST', 'GET'])
+def results():
     """
     Function that returns the car-rental page
     """
     origin = request.json['origin']
     destination = request.json['destination']
     date = request.json['date']
-    r = request.get()
+
     print("Origin: {}".format(origin))
     print("Destination: {}".format(destination))
     print("Date: {}".format(date))
