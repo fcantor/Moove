@@ -112,17 +112,21 @@ def resultsWithData():
         print("\n\nHERE!!!\n\n{} {} {}".format(origin, destination, date))
 
         # get flight data
-        flightFunc(origin, destination, date)
+        flightDict = {}
+        flightDict = flightFunc(origin, destination, date)
 
         # get car rental data
         session_id = createSession(origin, destination, date)
         print("THIS IS THE SESSION ID!!! {}".format(session_id))
-        pollSession(session_id, origin, destination, date)
-        
-        # get transit data
+        rentalDict = pollSession(session_id, origin, destination, date)
 
-        # get car driving data
-
+        allResults = {}
+        allResults = {
+            'flight': flightDict,
+            'rental': rentalDict
+        }
+        print("ALL RESULTS!!!! {}".format(allResults))
+        save(allResults)
         return render_template("results.html")
     else:
         print("THIS IS A GET METHOD")
@@ -287,7 +291,7 @@ def pollSession(session_id, origin, destination, date):
             'rental_gas': gas_cost
         }
         print("\n\n\I'M IN CARRENTAL!! {}\n\n".format(carRentalDict))
-        save(carRentalDict)
+        return (carRentalDict)
         # printing the variables above
         # print("Cheapest car rental from {} to {} is in {}".format(origin_city_and_state,
         #                                                         destination,
@@ -400,7 +404,7 @@ def flightFunc(origin, destination, date):
                         'airline': airline,
                         'airline_duration': duration,
                         'airline_cabin': cabin_class}
-        save(dict)
+        return (dict)
         print("SUCCESS!")
 
 
