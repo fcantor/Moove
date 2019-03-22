@@ -1,0 +1,8 @@
+.DS_Store
+file.json
+API_calls/.DS_Store
+web_dynamic/.DS_Store
+web_dynamic/config.py
+web_dynamic/__pycache__/config.cpython-34.pyc
+web_dynamic/__pycache__/filestorage.cpython-34.pyc
+web_dynamic/.DS_Store
