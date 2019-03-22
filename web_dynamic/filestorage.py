@@ -3,10 +3,16 @@
 import json
 import os
 
+list_count = 0;
+
 def save(dict):
         """ Serialized objects into __file_path """
-        with open("file.json", mode='w', encoding='utf-8') as f:
-            json.dump(dict, f)
+        with open('file.json', mode='a', encoding='utf-8') as file:
+            json.dump(dict, file)
+        #     data = json.load(file)
+        # with open('file.json', mode='w', encoding='utf-8') as file:
+        #     data['list'].append(dict)
+        #     json.dump(data, file)
 
 def deserialize():
     """ Deserialized json into python objects if file is found """

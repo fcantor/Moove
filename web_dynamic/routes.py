@@ -2,7 +2,7 @@
 """
 Flask app that integrates with static HTML template
 """
-from config import api_key, flight_key
+from config import api_key, flight_key, car_key
 import csv
 from datetime import datetime
 from flask import Flask, request, render_template, make_response, jsonify
@@ -117,7 +117,7 @@ def resultsWithData():
         # get car rental data
         session_id = createSession(origin, destination, date)
         print("THIS IS THE SESSION ID!!! {}".format(session_id))
-        pollSession(session_id)
+        pollSession(session_id, origin, destination, date)
         
         # get transit data
 
@@ -165,19 +165,20 @@ def add_headers(response):
 
 
 # CAR RENTAL
-# class CarRental(origin, destination, date=None):
 
 def findCity(origin_city_and_state):
     ''' This method takes in a city code and returns the name
         of the city in plain text '''
-    # open csv file
-    with open('city-codes.csv') as csv_file:
-        csv_reader = csv.reader(csv_file, delimiter=',')
-        for row in csv_reader:
-            print("ROW!!!! {}".format(row))
-            if row[1] == origin_city_and_state:
-                return(row[0])
-                print("THIS IS ROW 1: {}".format(row[1]))
+    try:
+        with open('city-codes.csv') as csv_file:
+            csv_reader = csv.reader(csv_file, delimiter=',')
+            for row in csv_reader:
+                print("ROW!!!! {}".format(row))
+                if row[1] == origin_city_and_state:
+                    return(row[0])
+                    print("THIS IS ROW 1: {}".format(row[1]))
+    except FileNotFoundError:
+        return ('79830')
 
 
 def createSession(origin, destination, date):
@@ -202,7 +203,7 @@ def createSession(origin, destination, date):
         # When front and back are connected, change code to
         # if (date is not None) or something similar, don't count args
         if date is not None:
-            pickup_date = datetime.strptime(date, "%m/%d/%Y").strftime("%Y-%m-%d")
+            pickup_date = date #datetime.strptime(date, "%m/%d/%Y").strftime("%Y-%m-%d")
         pickup_hour = '8'
         # Default date is today
         dropoff_date = pickup_date
@@ -234,7 +235,7 @@ def createSession(origin, destination, date):
 def getMileage(origin_city_and_state, destination, date):
     # Google maps directions to get miles to destination
     direc = gmaps.directions(origin_city_and_state, destination, mode="driving",
-                            departure_time=datetime.strptime(date, "%m/%d/%Y"))
+                            departure_time=datetime.strptime(date, "%Y-%m-%d"))
     distance_meters = direc[0]['legs'][0]['distance']['value']
     distance_miles = distance_meters // 1609.344
     gas_cost = (11.05 * distance_miles) // 100
@@ -242,7 +243,7 @@ def getMileage(origin_city_and_state, destination, date):
     return (gas_cost)
 
 
-def pollSession(session_id):
+def pollSession(session_id, origin, destination, date):
     ''' This polls the data from the session opened by createSession method '''
     api_start = "https://apidojo-kayak-v1.p.rapidapi.com/cars/poll?searchid="
     api_end = "&currency=USD"
@@ -277,13 +278,13 @@ def pollSession(session_id):
         gas_cost = getMileage(origin_city_and_state, destination, date);
         carRentalDict = {}
         carRentalDict = {
-            'pickup_location': pickup_location,
-            'dropoff_location': dropoff_location,
-            'rental_place': rental_place,
-            'origin_city_and_state': origin_city_and_state,
+            'rental_pickup': pickup_location,
+            'rental_dropoff': dropoff_location,
+            'rental_provider': rental_place,
+            'rental_origin': origin_city_and_state,
             'rental_car': rental_car,
-            'price': price,
-            'gas_cost': gas_cost
+            'rental_price': price,
+            'rental_gas': gas_cost
         }
         print("\n\n\I'M IN CARRENTAL!! {}\n\n".format(carRentalDict))
         save(carRentalDict)
@@ -386,16 +387,19 @@ def flightFunc(origin, destination, date):
         # values with the same name and will override the first values, which we need
         airline = flight['cheapestProviderName']
         duration = flight['duration']
-        cabin_class = flight['fareFamily']['displayName']
+        try:
+            cabin_class = flight['fareFamily']['displayName']
+        except KeyError:
+            cabin_class = 'Economy'
 
         # store the data in filestorage
         dict = {}
-        dict = {'airport_summary': airport_summary,
-                        'depart_date': depart_date,
-                        'cheapest_price': cheapest_price,
+        dict = {'airline_summary': airport_summary,
+                        'airline_depart': depart_date,
+                        'airline_price': cheapest_price,
                         'airline': airline,
-                        'duration': duration,
-                        'cabin_class': cabin_class}
+                        'airline_duration': duration,
+                        'airline_cabin': cabin_class}
         save(dict)
         print("SUCCESS!")
 
