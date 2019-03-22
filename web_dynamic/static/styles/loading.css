@@ -1,11 +1,11 @@
-body {
+/*body {
     background-color: white;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     margin-top: 60px;
-}
+}*/
 
 header {
     font-size: 15px;
@@ -16,11 +16,16 @@ header {
 }
 
 .cow {
-    align-self: center;
-    width: 335px;
+    /* align-self: center; */
+    /* width: 335px; */
     height: 304px;
     animation: beat 5s;
     animation-iteration-count: infinite;
+    /* text-align: center; */
+    /* justify-content: center; */
+    padding-left: 500px;
+
+    /* width: 100%; */
 }
 
 @keyframes beat {
