@@ -16,7 +16,7 @@ $(document).ready(function () {
                         '<header>' +
                             '<h1>One step closer to your destination...</h1>' +
                         '</header>' +
-                        '<div class="cow>' +
+                        '<div class="cow">' +
                             '<div class="head"></div>' +
                         '</div>' +
 
