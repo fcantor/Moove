@@ -23,9 +23,18 @@
             <div class="driving">
                 <h2>Driving <i class="fas fa-car"></i></h2>
                 <div class="info">
-                    <div class="price"><h4 class="price">Price</h4></div>
-                    <div class="distance"><h4 class="distance">Distance</h4></div>
-                    <div class="time"><h4 class="time">Time</h4></div>
+                    <div class="price">
+                        <h4>Price</h4>
+                        <p> ${{ results.cheapest_price }}</p>
+                    </div>
+                    <div class="airline">
+                        <h4>Airline</h4>
+                        <p>{{ results.airline }}</p>
+                    </div>
+                    <div class="time">
+                        <h4>Time</h4>
+                        <p>{{ results.duration}} minutes</p>
+                    </div>
                 </div>
                 <h3 class="book">Book Your Trip Here</h3>
             </div>
@@ -33,14 +42,17 @@
             <div class="flying">
                 <h2>Flying <i class="fas fa-plane"></i></h2>
                 <div class="info">
-                    <div class="price"><h4 class="price">Price</h4>
+                    <div class="price">
+                        <h4>Price</h4>
                         <p> ${{ results.cheapest_price }}</p>
                     </div>
-                    <div class="distance"><h4 class="distance">Provider</h4>
-                    <p>{{ results.airline }}</p>
+                    <div class="airline">
+                        <h4>Airline</h4>
+                        <p>{{ results.airline }}</p>
                     </div>
-                    <div class="time"><h4 class="time">Time</h4>
-                    <p>{{ results.duration}} minutes</p>
+                    <div class="time">
+                        <h4>Time</h4>
+                        <p>{{ results.duration}} minutes</p>
                     </div>
                 </div>
                 <h3 class="book">Book Your Trip Here</h3>
@@ -49,9 +61,18 @@
             <div class="transit">
                 <h2>Transit <i class="fas fa-train"></i></h2>
                 <div class="info">
-                    <div class="price"><h4 class="price">Price</h4></div>
-                    <div class="distance"><h4 class="distance">Distance</h4></div>
-                    <div class="time"><h4 class="time">Time</h4></div>
+                    <div class="price">
+                        <h4>Price</h4>
+                        <p> ${{ results.cheapest_price }}</p>
+                    </div>
+                    <div class="airline">
+                        <h4>Airline</h4>
+                        <p>{{ results.airline }}</p>
+                    </div>
+                    <div class="time">
+                        <h4>Time</h4>
+                        <p>{{ results.duration}} minutes</p>
+                    </div>
                 </div>
                 <h3 class="book">Book Your Trip Here</h3>
             </div>
@@ -59,9 +80,18 @@
             <div class="rentalCar">
                 <h2>Rental Car <i class="fas fa-car"></i></h2>
                 <div class="info">
-                    <div class="price"><h4 class="price">Price</h4></div>
-                    <div class="distance"><h4 class="distance">Distance</h4></div>
-                    <div class="time"><h4 class="time">Time</h4></div>
+                    <div class="price">
+                        <h4>Price</h4>
+                        <p> ${{ results.cheapest_price }}</p>
+                    </div>
+                    <div class="airline">
+                        <h4>Airline</h4>
+                        <p>{{ results.airline }}</p>
+                    </div>
+                    <div class="time">
+                        <h4>Time</h4>
+                        <p>{{ results.duration}} minutes</p>
+                    </div>
                 </div>
                 <h3 class="book">Book Your Trip Here</h3>
             </div>
@@ -69,8 +99,8 @@
         <!--endmain-->
 
         <!--footer-->
-        <!--footer>
-            <p>Always providing the best transportation options!</p>
-        </footer-->
+        <footer>
+            <a href="https://github.com/fcantor/Moove">Created by Team Moove</a>
+        </footer>
     </body>
 </html>

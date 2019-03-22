@@ -178,9 +178,9 @@ button {
 .aside .about {
     overflow-wrap: normal;
     align-self: center;
-    margin-top: 35px;
+    margin-top: 15px;
     margin-bottom: 20px;
-    width: 80%;
+    width: 95%;
     height: auto;
 }
 
@@ -200,7 +200,7 @@ button {
     flex-flow: row wrap;
     justify-content: space-around;
     align-self: center;
-    margin-top: 20px;
+    margin-top: 5px;
     margin-bottom: 75px;
     width: 80%;
     height: 60%;
@@ -226,7 +226,7 @@ a {
 }
 
 .aside .places .vegas p {
-    margin-top: 100px;
+    margin-top: 90px;
 }
 
 .aside .places .portland {
@@ -237,7 +237,7 @@ a {
 }
 
 .aside .places .portland p {
-    margin-top: 100px;
+    margin-top: 90px;
 }
 
 .aside .places .sandiego {
@@ -248,15 +248,7 @@ a {
 }
 
 .aside .places .sandiego p {
-    margin-top: 82px;
-}
-
-.aside .places .vegas p a,
-.aside .places .portland p a,
-.aside .places .sandiego p a {
-    text-decoration: none;
-    color: black;
-    text-align: center;
+    margin-top: 90px;
 }
 
 footer {

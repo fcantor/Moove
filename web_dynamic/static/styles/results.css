@@ -100,30 +100,57 @@ h2 .fas {
 }
 
 .price, .time {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
     background-color: rgba(209, 179, 62, .4);
     margin: 0px 5px 0px 0px;
     padding-left: 5px;
     width: 99%;
     height: 80px;
+    /* border: 2px solid blue; */
 }
 
 .price h4, .time h4 {
+    /* border: 1px solid green; */
     background: none;
     width: 90%;
     font-size: 20px;
 }
 
-.distance {
+.airline {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
     margin: 0px 5px 0px 0px;
     padding-left: 5px;
     width: 99%;
     height: 80px;
+    /* border: 2px solid blue; */
 }
 
-.distance h4 {
+.airline h4 {
     background: none;
     width: 90%;
     font-size: 20px;
+}
+
+.price p {
+    /* border: 1px solid red; */
+    margin-top: -20px;
+    margin-bottom: 40px;
+}
+
+.airline p {
+    margin-top: -20px;
+    margin-bottom: 40px;
+}
+
+.time p {
+    margin-top: -20px;
+    margin-bottom: 40px;
 }
 
 .book {
@@ -138,17 +165,22 @@ h2 .fas {
 /* endmain */
 
 
-/* footer
+/* footer */
 footer {
     bottom: 0;
     left: 0;
     right: 0;
     position: fixed;
+    padding-top: 40px;
     text-align: center;
-    color: #D1B33E;
     background-color: white;
     border-top: 2px solid #9F9E94;
-    height: 65px;
+    height: 60px;
+}
+
+footer a {
+    font-size: 25px;
+    color: #D1B33E;
 }
 /* end footer*/
 /

@@ -1,0 +1,71 @@
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3)
+and (orientation : portrait) {
+
+    body {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        height: 1000px;
+        margin: 0;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .logo {
+        position: absolute;
+        top: 0;
+        background-image: url(images/cow-logo.png);
+        background-repeat: no-repeat;
+        margin-right: 10px;
+        align-self: center;
+        color: #D1B33E;
+        width: 200px;
+        height: 175px;
+    }
+
+    .saying {
+        margin-top: 75px;
+        margin-bottom: 0;
+        border: none;
+        width: 100%;
+        color: #D1B33E;
+    }
+
+    .home {
+        margin: 0;
+        font-size: 20px;
+        text-align: center;
+        color: black;
+    }
+
+    /* main content */
+    .main {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+        height: 600px;
+    }
+
+    footer {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: fixed;
+        padding-top: 40px;
+        text-align: center;
+        background-color: white;
+        border-top: 2px solid #9F9E94;
+        height: 60px;
+    }
+
+    footer a {
+        font-size: 25px;
+        color: #D1B33E;
+    }
+}
