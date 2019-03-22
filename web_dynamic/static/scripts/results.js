@@ -4,15 +4,18 @@ $(document).ready(function () {
         let origin = $('#originplace').val()
         let destination = $('#destination').val()
         let selectedDate = $('#startdate').val()
-        console.log(origin)
         $.ajax({
             type: 'POST',
-            url: 'http://0.0.0.0:5000/flightResults',
+            url: 'http://0.0.0.0:5001/results',
             contentType: 'application/json',
-            data: JSON.stringify({"origin": origin, "destination": destination, "date": selectedDate}),
+            data: JSON.stringify({
+                "origin": origin,
+                "destination": destination,
+                "selectedDate": selectedDate
+            }),
             dataType: 'json',
-            success: function (data) {
-                console.log(data);
+            complete: function (data) {
+                window.location.href ='http://0.0.0.0:5001/results'
             }
         });    
     });

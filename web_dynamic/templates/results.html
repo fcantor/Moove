@@ -7,8 +7,8 @@
         <link rel="stylesheet" href="../static/styles/results.css">
         <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <!-- <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon"> -->
         <link rel="icon" type="image/x-icon" href="../static/styles/images/favicon.ico">
     </head>
 
@@ -33,9 +33,15 @@
             <div class="flying">
                 <h2>Flying <i class="fas fa-plane"></i></h2>
                 <div class="info">
-                    <div class="price"><h4 class="price">Price</h4></div>
-                    <div class="distance"><h4 class="distance">Distance</h4></div>
-                    <div class="time"><h4 class="time">Time</h4></div>
+                    <div class="price"><h4 class="price">Price</h4>
+                        <p> ${{ results.cheapest_price }}</p>
+                    </div>
+                    <div class="distance"><h4 class="distance">Provider</h4>
+                    <p>{{ results.airline }}</p>
+                    </div>
+                    <div class="time"><h4 class="time">Time</h4>
+                    <p>{{ results.duration}} minutes</p>
+                    </div>
                 </div>
                 <h3 class="book">Book Your Trip Here</h3>
             </div>
