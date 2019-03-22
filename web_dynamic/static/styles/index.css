@@ -25,7 +25,7 @@ body {
 }
 
 .booktrip {
-    background-color: white;
+    background-color: rgba(255, 255, 255, .7);
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -46,7 +46,7 @@ input {
     margin-top: 20px;
     margin-left: 30px;
     align-self: center;
-    width: 250px;
+    width: 17vw;
     height: 30px;
     font-family: 'Ubuntu', sans-serif;
     font-size: 15px;
@@ -56,6 +56,16 @@ input {
 
 input:focus {
     outline: none;
+}
+
+::placeholder {
+    color: black;
+    font-weight: bold;
+
+}
+
+input, textarea {
+    background-color: rgba(255, 255, 255, 0);
 }
 
 .cabindrop {
@@ -76,14 +86,17 @@ input:focus {
     margin-left: 35px;
     padding-top: 5px;
     padding-left: 3px;
-    width: 250px;
+    width: 17vw;
+    color: black;
+    font-weight: bold;
 }
 
 .cabindrop p .fas {
-    margin-left: 140px;
+    margin-left: 35px;
     height: 25px;
     width: 25px;
     color: black;
+    font-weight: bold;
 }
 
 .cabindrop .cabins {
@@ -124,6 +137,9 @@ button {
     width: 65px;
 }
 
+.g-signin2 {
+    height: 30px;
+}
 /*right side*/
 .main2 {
     display: flex;
@@ -131,7 +147,7 @@ button {
     justify-content: center;
     align-content: center;
     width: 50%;
-    height: auto;
+    height: 100%;
 }
 
 .main2 .logo {
@@ -143,25 +159,29 @@ button {
     align-self: center;
     color: #D1B33E;
     width: 200px;
-    height: 175px;
+    height: 40%;
 }
 
 .aside {
+    position: relative;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-content: center;
     align-self: center;
-    margin: 90px 20px 50px 20px;
-    width: 50%;
-    height: 500px;
+    margin: 180px 20px 50px 20px;
+    width: 60%;
+    height: auto;
     text-align: center;
 }
 
 .aside .about {
+    overflow-wrap: normal;
+    align-self: center;
     margin-top: 35px;
     margin-bottom: 20px;
-    height: 300px;
+    width: 80%;
+    height: auto;
 }
 
 .aside .about .aboutheading {
@@ -175,17 +195,19 @@ button {
 }
 
 .aside .places {
+    position: relative;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     align-self: center;
     margin-top: 20px;
     margin-bottom: 75px;
-    width: 330px;
-    height: 200px;
+    width: 80%;
+    height: 60%;
 }
 
-.aside .places .viewplaces {
+.aside .viewplaces {
+    margin: 0;
     align-self: center;
     left: 0;
     right: 0;
@@ -204,7 +226,7 @@ a {
 }
 
 .aside .places .vegas p {
-    margin-top: 85px;
+    margin-top: 100px;
 }
 
 .aside .places .portland {
@@ -215,7 +237,7 @@ a {
 }
 
 .aside .places .portland p {
-    margin-top: 85px;
+    margin-top: 100px;
 }
 
 .aside .places .sandiego {
@@ -226,5 +248,17 @@ a {
 }
 
 .aside .places .sandiego p {
-    margin-top: 85px;
+    margin-top: 82px;
+}
+
+.aside .places .vegas p a,
+.aside .places .portland p a,
+.aside .places .sandiego p a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+footer {
+    visibility: hidden;
 }

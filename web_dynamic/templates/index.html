@@ -5,10 +5,12 @@
         <title>Moove</title>
 
         <link rel="stylesheet" href="../static/styles/index.css">
+        <link rel="stylesheet" href="../statics/tyles/indexmobile.css">
         <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     </head>
     <body>
+        <header><div class="cow"><p>.</p></div></header>
         <div class="main1">
             <div class="booktrip">
                 <form class="origin" action="index.html" method="post">
@@ -22,7 +24,7 @@
                     <input type="date" id="startdate" name="startdate" required>
                 </form>
                 <!--this is the dropbox to select a cabin-->
-                <div class="cabindrop">
+                <!--div class="cabindrop">
                     <p>Select Cabin<i class="fas fa-angle-down"></i></p>
                     <div class="cabins">
                         <ul>
@@ -31,7 +33,7 @@
                             <li class="first">First Class</li>
                         </ul>
                     </div>
-                </div>
+                </div-->
                 <button type="submit" name="Search">Search</button>
             </div>
         </div>
@@ -51,25 +53,23 @@
                         and more recently with desktop publishing software like Aldus
                         PageMaker including versions of Lorem Ipsum.<p>
                 </div>
+                <h2 class="viewplaces">Check out these cities!</h2>
                 <div class="places">
-                    <h2 class="viewplaces">Check out these cities!</h2>
                     <div class="vegas">
-                        <a href="https://www.lasvegasnevada.gov/"></a>
-                        <p>Las Vegas, Nevada</p>
+                        <p><a href="https://www.lasvegasnevada.gov/">Las Vegas, Nevada</a></p>
                     </div>
                     <div class="portland">
-                        <a href="https://www.portlandoregon.gov/"></a>
-                        <p>Portland, Oregon</p>
+                        <p><a href="https://www.portlandoregon.gov/">Portland, Oregon</a></p>
                     </div>
                     <div class="sandiego">
                         <a href="https://www.sandiego.gov/"></a>
-                        <p>San Diego, California</p>
+                        <p><a href="https://www.sandiego.gov/">San Diego, California</a></p>
                     </div>
                 </div>
             </div>
-            <!--footer>
-                <p>Always providing the best transportation options!</p>
-            </footer-->
+            <footer>
+                <a href="https://github.com/fcantor/Moove">Click here to view the source code</a>
+            </footer>
         </div>
     </body>
 </html>
