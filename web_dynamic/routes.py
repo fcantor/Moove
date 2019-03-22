@@ -120,10 +120,15 @@ def resultsWithData():
         print("THIS IS THE SESSION ID!!! {}".format(session_id))
         rentalDict = pollSession(session_id, origin, destination, date)
 
+        # driving data
+        drivingDict = {}
+        drivingDict = getCarData(origin, destination, date)
+
         allResults = {}
         allResults = {
             'flight': flightDict,
-            'rental': rentalDict
+            'rental': rentalDict,
+            'driving': drivingDict
         }
         print("ALL RESULTS!!!! {}".format(allResults))
         save(allResults)
@@ -200,12 +205,11 @@ def getCarData(origin, destination, date):
     gas_cost = (11.05 * distance_miles) // 100
     total_cost = wt_cost + gas_cost
 
-    print("Road Trip!")
-    print(f"Distance: {distance_miles}")
-    print(f"Time: {time_converted}")
-    print(f"Total Costs driving: ${wt_cost + gas_cost} ($.19/mile)")
-    print(f"Total Costs renting: ${gas_cost} ($.11/mile)")
-
+    # print("Road Trip!")
+    # print(f"Distance: {distance_miles}")
+    # print(f"Time: {time_converted}")
+    # print(f"Total Costs driving: ${wt_cost + gas_cost} ($.19/mile)")
+    # print(f"Total Costs renting: ${gas_cost} ($.11/mile)")
     carDict = {}
     carDict = {
         'distance_miles': distance_miles,
