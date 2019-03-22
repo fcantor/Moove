@@ -61,11 +61,16 @@ footer {
     left: 0;
     right: 0;
     position: fixed;
+    padding-top: 40px;
     text-align: center;
-    color: #D1B33E;
     background-color: white;
-    border-top: 2px solid black;
-    height: 65px;
+    border-top: 2px solid #9F9E94;
+    height: 60px;
+}
+
+footer a {
     font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    color: #D1B33E;
 }
 /* end footer*/
