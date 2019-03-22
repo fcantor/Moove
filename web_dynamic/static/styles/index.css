@@ -188,6 +188,9 @@ button {
     margin-top: 5px;
     margin-bottom: 3px;
     text-align: center;
+    font-size: 23px;
+    color: #D1B33E;
+    font-weight: 700px;
 }
 
 .aside .about p {
